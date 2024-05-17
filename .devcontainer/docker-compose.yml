@@ -1,16 +1,14 @@
 version: '3.8'
 services:
-  mysql:
-    container_name: mysql
-    image: mysql:latest
+  postgres:
+    container_name: postgres
+    image: postgres:14
     ports:
-      - '3306:3306'
+      - "5432:5432"
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: my_database 
-      MYSQL_USER: my_user
-      MYSQL_PASSWORD: my_password
+      POSTGRES_DB: test
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
     volumes:
       - ./sql:/docker-entrypoint-initdb.d  # Mount the sql directory into the container
     command: --init-file /docker-entrypoint-initdb.d/init.sql  # Execute the init.sql script during container initialization
-
