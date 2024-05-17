@@ -1,6 +1,0 @@
---CREATE TABLE FIRST(id INT);
-
---INSERT INTO FIRST
---VALUES
---(5),
---(6);
