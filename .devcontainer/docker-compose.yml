@@ -14,3 +14,8 @@ services:
       - ./sql:/docker-entrypoint-initdb.d  # Mount the sql directory into the container
     command: --init-file /docker-entrypoint-initdb.d/init.sql  # Execute the init.sql script during container initialization
 
+ app:
+  image: ubuntu:latest
+  container_name: app
+  depends_on:
+    - mysql
