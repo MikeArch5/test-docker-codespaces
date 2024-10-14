@@ -23,5 +23,5 @@
 			]
 		}
 	},
-	"postCreateCommand": "apt-get update && apt-get install -y npm git",
+	"postCreateCommand": "apt-get update && apt-get install -y npm git"
 }
