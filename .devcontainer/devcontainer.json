@@ -23,5 +23,7 @@
 			]
 		}
 	},
-	"postCreateCommand": "apt-get update && apt-get install -y npm git"
+	"features": {
+  		"ghcr.io/devcontainers/features/git:1": {}
+	}
 }
